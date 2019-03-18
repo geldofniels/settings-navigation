@@ -30,12 +30,12 @@ ul{
 .nav-item {
   margin: 0 0 10px 0;
   cursor: pointer;
-  &.active {
-    text-decoration: underline;
-  }
-  &:last-child {
-    margin-bottom: 50px;
-  }
+}
+.nav-item.active {
+  text-decoration: underline;
+}
+.nav-item:last-child {
+  margin-bottom: 50px;
 }
 .settings-content {
   padding: 50px;
@@ -52,14 +52,14 @@ ul{
   display: flex;
   flex: 1 0 auto;
   margin-bottom: 50px;
-  &_left-side {
-    flex: 1 1 40%;
-    margin-right: 30px;
-  }
-  &_right-side {
-    flex: 1 1 60%;
-    margin-bottom: 50px;
-  }
+}
+.settings-block_left-side {
+  flex: 1 1 40%;
+  margin-right: 30px;
+}
+.settings-block_right-side {
+  flex: 1 1 60%;
+  margin-bottom: 50px;
 }
 .content-box {
   padding: 20px;
