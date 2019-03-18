@@ -1,38 +1,26 @@
-<!doctype html>
-
-<html lang="en">
-<head>
-  <meta charset="utf-8">
-  <title>Resengo settings</title>
-  <link type="text/css" rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/meyer-reset/2.0/reset.css">
-  <link type="text/css" rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.css">
-  <link type="text/css" rel="stylesheet" href="style.css" />
-</head>
-
-<body>
- <div class="page-layout-settings">
+<div class="page-layout-settings">
   <div class="nav-tabs--vertical">
     <div class="nav-category">Details zaak</div>
-    <ul class="nav-content">
-      <li class="nav-item active">Algemeen</li>
-      <li class="nav-item">Bedrijfspagina</li>
+    <ul class="nav-content details">
+      <li class="nav-item general active"><a href="#general">Algemeen</a></li>
+      <li class="nav-item"><a href="#company">Bedrijfspagina</a></li>
     </ul>
     <div class="nav-category">Beschikbaarheid</div>
-    <ul class="nav-content">
-      <li class="nav-item">Services</li>
-      <li class="nav-item">Openingsuren</li>
-      <li class="nav-item">Vakanties</li>
-      <li class="nav-item">Prijzen en promoties</li>
+    <ul class="nav-content availability">
+      <li class="nav-item"><a href="#services">Services</a></li>
+      <li class="nav-item"><a href="#hours">Openingsuren</a></li>
+      <li class="nav-item"><a href="#holidays">Vakanties</a></li>
+      <li class="nav-item"><a href="#prices">Prijzen en promoties</a></li>
     </ul>
     <div class="nav-category">Tafels</div>
-    <ul class="nav-content">
-      <li class="nav-item">Reserveringen</li>
-      <li class="nav-item">Tafels</li>
-      <li class="nav-item">Layout</li>
+    <ul class="nav-content tables">
+      <li class="nav-item"><a href="#reservations">Reserveringen</a></li>
+      <li class="nav-item"><a href="#tables">Tafels</a></li>
+      <li class="nav-item"><a href="#layout">Layout</a></li>
     </ul>
   </div>
-  <div class="settings-content">
-    <div class="settings-block">
+  <div class="settings-content details">
+    <div class="settings-block" id="general">
       <div class="settings-block_left-side">
         <div class="settings-title">
           Algemeen
@@ -63,7 +51,7 @@
         </div>
       </div>
     </div>
-    <div class="settings-block">
+    <div class="settings-block" id="company">
       <div class="settings-block_left-side">
         <div class="settings-title">
           Bedrijfspagina
@@ -95,6 +83,124 @@
       </div>
     </div>
   </div>
+  <div class="settings-content availability">
+    <div class="settings-block" id="services">
+      <div class="settings-block_left-side">
+        <div class="settings-title">
+          Services
+        </div>
+        <div class="settings-description">
+          Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+        </div>
+      </div>
+      <div class="settings-block_right-side">
+        <div class="content-box elevation-4">
+          Services<br>
+          <div style="height:150px;background-color: #ebeef1;"></div>
+        </div>
+      </div>
+    </div>
+    <div class="settings-block" id="hours">
+      <div class="settings-block_left-side">
+        <div class="settings-title">
+          Openingsuren
+        </div>
+        <div class="settings-description">
+          Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+        </div>
+      </div>
+      <div class="settings-block_right-side">
+        <div class="content-box elevation-4">
+          Ontbijt<br>
+          <div style="height:150px;background-color: #ebeef1;"></div>
+          Lunch<br>
+          <div style="height:150px;background-color: #ebeef1;"></div>
+          Diner<br>
+          <div style="height:150px;background-color: #ebeef1;"></div>
+        </div>
+      </div>
+    </div>
+    <div class="settings-block" id="holidays">
+      <div class="settings-block_left-side">
+        <div class="settings-title">
+          Vakanties
+        </div>
+        <div class="settings-description">
+          Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+        </div>
+      </div>
+      <div class="settings-block_right-side">
+        <div class="content-box elevation-4">
+          Vakanties<br>
+          <div style="height:150px;background-color: #ebeef1;"></div>
+        </div>
+      </div>
+    </div>
+    <div class="settings-block" id="prices">
+      <div class="settings-block_left-side">
+        <div class="settings-title">
+          Prijzen en promoties
+        </div>
+        <div class="settings-description">
+          Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+        </div>
+      </div>
+      <div class="settings-block_right-side">
+        <div class="content-box elevation-4">
+          Prijzenmatrix<br>
+          <div style="height:150px;background-color: #ebeef1;"></div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="settings-content tables">
+    <div class="settings-block" id="reservations">
+      <div class="settings-block_left-side">
+        <div class="settings-title">
+          Reserveringen
+        </div>
+        <div class="settings-description">
+          Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+        </div>
+      </div>
+      <div class="settings-block_right-side">
+        <div class="content-box elevation-4">
+          Reserveringsinstellingen<br>
+          <div style="height:150px;background-color: #ebeef1;"></div>
+        </div>
+      </div>
+    </div>
+    <div class="settings-block" id="tables">
+      <div class="settings-block_left-side">
+        <div class="settings-title">
+          Tafels
+        </div>
+        <div class="settings-description">
+          Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+        </div>
+      </div>
+      <div class="settings-block_right-side">
+        <div class="content-box elevation-4">
+          Tafels<br>
+          <div style="height:150px;background-color: #ebeef1;"></div>
+        </div>
+      </div>
+    </div>
+    <div class="settings-block" id="layout">
+      <div class="settings-block_left-side">
+        <div class="settings-title">
+          Layout
+        </div>
+        <div class="settings-description">
+          Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+        </div>
+      </div>
+      <div class="settings-block_right-side">
+        <div class="content-box elevation-4">
+          Layout<br>
+          <div style="height:150px;background-color: #ebeef1;"></div>
+        </div>
+      </div>
+    </div>
+  </div>
 </div>
-</body>
-</html>
