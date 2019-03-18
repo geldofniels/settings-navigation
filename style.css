@@ -77,6 +77,9 @@ h2 {
   margin-bottom: 50px;
   border-bottom: 1px solid #e4e6e9;
 }
+.settings-block:last-child {
+  border-bottom: 0;
+}
 .settings-block_left-side {
   flex: 1 1 40%;
   margin-right: 30px;
