@@ -58,6 +58,7 @@ h2 {
   padding: 30px 50px;
   padding-left: calc(270px + 50px);
   background-color: #F4F6F8;
+  flex: 1;
 }
 .settings-content.availability,
 .settings-content.tables{
