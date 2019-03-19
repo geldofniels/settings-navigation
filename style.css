@@ -1,3 +1,6 @@
+html,body,.page-layou-settings {
+  height: 100%;
+}
 body {
   font-family: sans-serif;
 }
