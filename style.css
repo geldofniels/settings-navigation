@@ -103,3 +103,6 @@ h2 {
 .mt-4 {
   margin-top: 30px;
 }
+.no-b {
+ border: 0 !important; 
+}
