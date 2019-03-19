@@ -1,5 +1,8 @@
-html,body,.page-layout-settings {
+html,body{
   height: 100%;
+}
+.page-layout-settings {
+  min-height: 100vh;
 }
 body {
   font-family: sans-serif;
