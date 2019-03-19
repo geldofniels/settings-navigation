@@ -15,25 +15,25 @@
     <div class="nav-category">Details zaak</div>
     <ul class="nav-content details">
       <li class="nav-item general active"><a href="#general">Algemeen</a></li>
-      <li class="nav-item"><a href="#company">Bedrijfspagina</a></li>
+      <li class="nav-item company"><a href="#company">Bedrijfspagina</a></li>
     </ul>
     <div class="nav-category">Beschikbaarheid</div>
     <ul class="nav-content availability">
-      <li class="nav-item"><a href="#services">Services</a></li>
-      <li class="nav-item"><a href="#hours">Openingsuren</a></li>
-      <li class="nav-item"><a href="#holidays">Vakanties</a></li>
-      <li class="nav-item"><a href="#prices">Prijzen en promoties</a></li>
+      <li class="nav-item services"><a href="#services">Services</a></li>
+      <li class="nav-item hours"><a href="#hours">Openingsuren</a></li>
+      <li class="nav-item holidays"><a href="#holidays">Vakanties</a></li>
+      <li class="nav-item prices"><a href="#prices">Prijzen en promoties</a></li>
     </ul>
     <div class="nav-category">Tafels</div>
     <ul class="nav-content tables">
-      <li class="nav-item"><a href="#reservations">Reserveringen</a></li>
-      <li class="nav-item"><a href="#tables">Tafels</a></li>
-      <li class="nav-item"><a href="#layout">Layout</a></li>
+      <li class="nav-item reservations"><a href="#reservations">Reserveringen</a></li>
+      <li class="nav-item tables"><a href="#tables">Tafels</a></li>
+      <li class="nav-item layout"><a href="#layout">Layout</a></li>
     </ul>
   </div>
   <div class="settings-content details">
     <h2 id="general">Details zaak</h2>
-    <div class="settings-block">
+    <div class="settings-block" id="general">
       <div class="settings-block_left-side">
         <div class="settings-title">
           Algemeen
@@ -112,8 +112,8 @@
     </div>
   </div>
   <div class="settings-content availability">
-    <h2 id="services">Beschikbaarheid</h2>
-    <div class="settings-block">
+    <h2>Beschikbaarheid</h2>
+    <div class="settings-block" id="services">
       <div class="settings-block_left-side">
         <div class="settings-title">
           Services
@@ -183,8 +183,8 @@
     </div>
   </div>
   <div class="settings-content tables">
-    <h2 id="reservations">Tafels</h2>
-    <div class="settings-block">
+    <h2 >Tafels</h2>
+    <div class="settings-block" id="reservations">
       <div class="settings-block_left-side">
         <div class="settings-title">
           Reserveringen
@@ -236,56 +236,141 @@
 </div>
   
 <script>
-$('.nav-content.details').click(function() {
+$('.nav-item.general').click(function() {
   $('.settings-content.details').show();
   $('.settings-content.availability').hide();
   $('.settings-content.tables').hide();
+  
+  $('.settings-block#general').show();
+  $('.settings-block#company').hide();
+  $('.settings-block#services').hide();
+  $('.settings-block#hours').hide();
+  $('.settings-block#holidays').hide();
+  $('.settings-block#prices').hide();
+  $('.settings-block#reservations').hide();
+  $('.settings-block#tables').hide();
+  $('.settings-block#layout').hide();
 });
-$('.nav-content.availability').click(function() {
+$('.nav-item.company').click(function() {
+  $('.settings-content.details').show();
+  $('.settings-content.availability').hide();
+  $('.settings-content.tables').hide();
+  
+  $('.settings-block#general').hide();
+  $('.settings-block#company').show();
+  $('.settings-block#services').hide();
+  $('.settings-block#hours').hide();
+  $('.settings-block#holidays').hide();
+  $('.settings-block#prices').hide();
+  $('.settings-block#reservations').hide();
+  $('.settings-block#tables').hide();
+  $('.settings-block#layout').hide();
+});
+$('.nav-item.services').click(function() {
   $('.settings-content.details').hide();
   $('.settings-content.availability').show();
   $('.settings-content.tables').hide();
+  
+  $('.settings-block#general').hide();
+  $('.settings-block#company').hide();
+  $('.settings-block#services').show();
+  $('.settings-block#hours').hide();
+  $('.settings-block#holidays').hide();
+  $('.settings-block#prices').hide();
+  $('.settings-block#reservations').hide();
+  $('.settings-block#tables').hide();
+  $('.settings-block#layout').hide();
 });
-$('.nav-content.tables').click(function() {
+$('.nav-item.hours').click(function() {
+  $('.settings-content.details').hide();
+  $('.settings-content.availability').show();
+  $('.settings-content.tables').hide();
+  
+  $('.settings-block#general').hide();
+  $('.settings-block#company').hide();
+  $('.settings-block#services').hide();
+  $('.settings-block#hours').show();
+  $('.settings-block#holidays').hide();
+  $('.settings-block#prices').hide();
+  $('.settings-block#reservations').hide();
+  $('.settings-block#tables').hide();
+  $('.settings-block#layout').hide();
+});
+$('.nav-item.holidays').click(function() {
+  $('.settings-content.details').hide();
+  $('.settings-content.availability').show();
+  $('.settings-content.tables').hide();
+  
+  $('.settings-block#general').hide();
+  $('.settings-block#company').hide();
+  $('.settings-block#services').hide();
+  $('.settings-block#hours').hide();
+  $('.settings-block#holidays').show();
+  $('.settings-block#prices').hide();
+  $('.settings-block#reservations').hide();
+  $('.settings-block#tables').hide();
+  $('.settings-block#layout').hide();
+});
+$('.nav-item.prices').click(function() {
+  $('.settings-content.details').hide();
+  $('.settings-content.availability').show();
+  $('.settings-content.tables').hide();
+  
+  $('.settings-block#general').hide();
+  $('.settings-block#company').hide();
+  $('.settings-block#services').hide();
+  $('.settings-block#hours').hide();
+  $('.settings-block#holidays').hide();
+  $('.settings-block#prices').show();
+  $('.settings-block#reservations').hide();
+  $('.settings-block#tables').hide();
+  $('.settings-block#layout').hide();
+});
+$('.nav-item.reservations').click(function() {
   $('.settings-content.details').hide();
   $('.settings-content.availability').hide();
   $('.settings-content.tables').show();
-});  
-  $('a[href*="#"]')
-  // Remove links that don't actually link to anything
-  .not('[href="#"]')
-  .not('[href="#0"]')
-  .click(function(event) {
-    // On-page links
-    if (
-      location.pathname.replace(/^\//, '') == this.pathname.replace(/^\//, '') 
-      && 
-      location.hostname == this.hostname
-    ) {
-      // Figure out element to scroll to
-      var target = $(this.hash);
-      target = target.length ? target : $('[name=' + this.hash.slice(1) + ']');
-      // Does a scroll target exist?
-      if (target.length) {
-        // Only prevent default if animation is actually gonna happen
-        event.preventDefault();
-        $('html, body').animate({
-          scrollTop: target.offset().top
-        }, 500, function() {
-          // Callback after animation
-          // Must change focus!
-          var $target = $(target);
-          $target.focus();
-          if ($target.is(":focus")) { // Checking if the target was focused
-            return false;
-          } else {
-            $target.attr('tabindex','-1'); // Adding tabindex for elements not focusable
-            $target.focus(); // Set focus again
-          };
-        });
-      }
-    }
-  });
+  
+  $('.settings-block#general').hide();
+  $('.settings-block#company').hide();
+  $('.settings-block#services').hide();
+  $('.settings-block#hours').hide();
+  $('.settings-block#holidays').hide();
+  $('.settings-block#prices').hide();
+  $('.settings-block#reservations').show();
+  $('.settings-block#tables').hide();
+  $('.settings-block#layout').hide();
+});
+$('.nav-item.tables').click(function() {
+  $('.settings-content.details').hide();
+  $('.settings-content.availability').hide();
+  $('.settings-content.tables').show();
+  
+  $('.settings-block#general').hide();
+  $('.settings-block#company').hide();
+  $('.settings-block#services').hide();
+  $('.settings-block#hours').hide();
+  $('.settings-block#holidays').hide();
+  $('.settings-block#prices').hide();
+  $('.settings-block#reservations').hide();
+  $('.settings-block#tables').show();
+  $('.settings-block#layout').hide();
+});
+$('.nav-item.layout').click(function() {
+  $('.settings-content.details').hide();
+  $('.settings-content.availability').hide();
+  $('.settings-content.tables').show();
+  
+  $('.settings-block#general').hide();
+  $('.settings-block#company').hide();
+  $('.settings-block#services').hide();
+  $('.settings-block#hours').hide();
+  $('.settings-block#holidays').hide();
+  $('.settings-block#prices').hide();
+  $('.settings-block#reservations').hide();
+  $('.settings-block#tables').hide();
+  $('.settings-block#layout').show();
+});
 </script>
 
 </body></html>
